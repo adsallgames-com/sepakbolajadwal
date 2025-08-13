@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mengalihkan...</title>
+<style>
+body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      font-size: 1.5rem;
+      flex-direction: column;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+  <script>
+    let countdown = 2;
+    function updateCountdown() {
+      document.getElementById("timer").textContent = countdown;
+      if (countdown === 0) {
+        window.location.href = "https://anastasyakhosasih.wixsite.com/event-menarik";
+      } else {
+        countdown--;
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+    window.onload = updateCountdown;
+  </script>
+<div>Mohon tunggu sebentar...</div>
+  <div class="countdown">Dialihkan dalam <span id="timer">2</span> detik</div>
+</body>
+</html>
